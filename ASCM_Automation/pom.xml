@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.serenitybdd.starter</groupId>
+	<artifactId>cucumber-starter</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>ASCM_AUTOMATION</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<serenity.version>2.6.0</serenity.version>
+		<serenity.maven.version>2.6.0</serenity.maven.version>
+		<serenity.cucumber.version>2.6.0</serenity.cucumber.version>
+		<encoding>UTF-8</encoding>
+		<tags></tags>
+		<webdriver.base.url></webdriver.base.url>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-core</artifactId>
+			<version>${serenity.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-cucumber6</artifactId>
+			<version>${serenity.cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-screenplay</artifactId>
+			<version>${serenity.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-screenplay-webdriver</artifactId>
+			<version>${serenity.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+
+			<groupId>net.serenity-bdd</groupId>
+
+			<artifactId>serenity-junit</artifactId>
+
+			<version>${serenity.version}</version>
+
+			<scope>test</scope>
+
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>5.3.10</version>
+		</dependency>
+
+
+		<dependency>
+
+			<groupId>net.serenity-bdd</groupId>
+
+			<artifactId>serenity-screenplay</artifactId>
+
+			<version>${serenity.version}</version>
+
+			<scope>test</scope>
+
+		</dependency>
+
+
+		<dependency>
+
+			<groupId>net.serenity-bdd</groupId>
+
+			<artifactId>serenity-screenplay-webdriver</artifactId>
+
+			<version>${serenity.version}</version>
+
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+
+			<groupId>net.serenity-bdd</groupId>
+
+			<artifactId>serenity-cucumber6</artifactId>
+
+			<version>${serenity.cucumber.version}</version>
+
+			<scope>test</scope>
+
+		</dependency>
+
+
+		<dependency>
+
+			<groupId>org.hamcrest</groupId>
+
+			<artifactId>hamcrest-all</artifactId>
+
+			<version>1.3</version>
+
+			<scope>test</scope>
+
+		</dependency>
+
+
+		<dependency>
+
+			<groupId>org.apache.poi</groupId>
+
+			<artifactId>poi</artifactId>
+
+			<version>4.1.1</version>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>org.apache.poi</groupId>
+
+			<artifactId>poi-ooxml</artifactId>
+
+			<version>4.1.1</version>
+
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-core</artifactId>
+			<version>[${serenity.version}]</version>
+		</dependency>
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-ensure</artifactId>
+			<version>${serenity.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>3.6.2</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>3.0.0-M3</version>
+
+				<configuration>
+					<includes>
+
+
+   						<include>**/CLTDBundlePurchaseNoNNAWithLogin_PP.java</include>
+						<include>**/CLTDFirstExamWithLogin.java</include>
+						<include>**/CLTDBundlePurchaseNoNNAWithoutLogin.java</include>
+						<include>**/CLTDExamWithLogin_PP.java</include>
+						<include>**/CLTDLSWithLogin.java</include>
+						<include>**/CLTDBundlePurchaseNoNNAWithLoginWithPromoCode.java</include>
+						<include>**/Membership_Discount.java</include>
+						<include>**/Membership_Regular.java</include>
+						<include>**/WarehouseSmokeTest.java</include>
+						<include>**/ProcurrementSmokeTest.java</include>
+						<include>**/FundationCoursesWithLogin.java</include> 
+				
+						<include>**/MembershipStudentDiscount.java</include>
+						<include>**/MemershipStudentDiscount_2019010.java</include>
+						
+						
+						<include>**/Membership_Legacy_With_AutoRenew.java</include>
+						<include>**/Membership_Legacy_Without_AutoRenew.java</include>
+						<include>**/MemershipLegacy_WithAutoRenew_1190180.java</include>
+						<include>**/MemershipLegacy_WithAutoRenew_1602176.java</include>
+						<include>**/MemershipLegacy_WithAutoRenew_1880880.java</include>
+						<include>**/MemershipLegacy_WithAutoRenew_1881440.java</include>
+						
+
+						
+						<include>**/InternationalChapMembership.java</include>
+						<include>**/MultipleChapWithMembership.java</include>
+						<include>**/NoChapMonthlyMembership.java</include>
+						<include>**/OneChapMonthlyMembership.java</include>
+						<include>**/OneChapWithoutUpgradedMembership.java</include>
+						<include>**/OneChapWithUpgradedMembership.java</include>
+						<include>**/OnlyMembership.java</include>
+						<include>**/MemershipTypesVerification.java</include>
+						<include>**/Membership_VerifySelectSkipCertificate.java</include>
+						<include>**/Membership_VerifyUserCanSelect_SkipChapter.java</include>
+
+						
+						<include>**/SupplyChainCertificates.java</include>
+						<include>**/VerifyProductPages.java</include>
+						<include>**/VerifyReturnPolicyLink.java</include>
+						<include>**/VerifyCorrectItem.java</include>
+						<include>**/VerifyUserCanAddProductInCart.java</include>
+						
+						<include>**/Annual_VerifyPurchaseMultipleLink.java</include>
+						<include>**/Monthly_VerifyUpsellLinkRedirectsMembership.java</include>
+						<include>**/VerifyCertificateUpgradeModal.java</include>
+						<include>**/VerifyMembershipUpcellCTA.java</include>
+						<include>**/VerifyUpsellLinkRedirectsMembership.java</include>
+						<include>**/ReferralPurchase.java</include>
+						<include>**/PromoPurchase.java</include>
+						<include>**/VerifyCorporateAccountCreation.java</include>
+						<include>**/VerifyCorporateAccountCreationByLink.java</include>
+						
+						<include>**/OrderHistory_DownloadViewDetails.java</include>
+						<include>**/OrderHistory_OrderConfirmation.java</include>
+						
+						<include>**/VerifyUserCanSeeCourse.java</include>
+						<include>**/VerifyUserCanSeeCourseExpiry.java</include>
+						
+						<include>**/VerifyMembershipsCorrectExpiryDate.java</include>
+						<include>**/VerifyRenewAndCertificateToggleOn.java</include>
+						<include>**/VerifyRenewCertificateAndChapterONToggle.java</include>
+						<include>**/VerifyAutoRenewONToggle.java</include>
+						<include>**/MembershipStudentDiscount_2019010.java</include>
+						
+						
+
+
+
+					</includes>
+
+					<!-- <parallel>classes</parallel> -->
+					<threadCount>1</threadCount>
+					<forkCount>${parallel.tests}</forkCount>
+
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.serenity-bdd.maven.plugins</groupId>
+				<artifactId>serenity-maven-plugin</artifactId>
+				<version>${serenity.maven.version}</version>
+				<configuration>
+					<tags>${tags}</tags>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>net.serenity-bdd</groupId>
+						<artifactId>serenity-core</artifactId>
+						<version>${serenity.version}</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<id>serenity-reports</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>aggregate</goal>
+						</goals>
+					</execution>
+				</executions>
+
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>
